@@ -3,7 +3,7 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: Set nginx port to 8080
+    - name: Change nginx port from 80 to 8080
       nginx_port:
         port: 8080
-        config_path: /etc/nginx/sites-available/default
+        config_path: /etc/nginx/sites-available/nginx-files.conf
