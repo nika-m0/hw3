@@ -1,0 +1,9 @@
+---
+- name: Test nginx port module
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Set nginx port to 8080
+      nginx_port:
+        port: 8080
+        config_path: /etc/nginx/sites-available/default
